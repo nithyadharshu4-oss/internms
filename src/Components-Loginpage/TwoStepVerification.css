@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.twostepverification-main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: "Manrope", sans-serif;
+}
+
+.left-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 70px 52px 32px;
+  background: linear-gradient(192deg, #3d79ea 5.68%, #1b1a2d 95.19%);
+}
+
+.left-content {
+  margin-top: 120px;
+}
+
+.left-heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  color: #ffffff;
+}
+
+.left-description {
+  max-width: 380px;
+  margin-top: 32px;
+  margin-bottom: 72px;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.security-info {
+  display: flex;
+  gap: 18px;
+}
+
+.security-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.security-icon {
+  width: 44px;
+  height: 44px;
+  display: block;
+  object-fit: contain;
+}
+
+.security-text h4 {
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.security-text p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.copyright {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.two-step-right-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.two-step-form {
+  width: 100%;
+  max-width: 443px;
+}
+
+.back-button,
+.login-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  color: #3525cd;
+  font-size: 14px;
+  cursor: pointer;
+}
+.login-button img{
+           width:18px;
+           height:auto;
+}
+.form-title {
+  margin-top: 42px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.form-subtitle {
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6b7280;
+}
+
+.verification-card {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #d9d6f5;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.verification-card.active {
+  background: #f5f7ff;
+  border: 2px solid #3525cd;
+}
+
+.card-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #eef2ff;
+}
+
+.card-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.card-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.card-details p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.radio-button {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio-button.selected {
+  border-color: #3525cd;
+}
+
+.radio-button.selected::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3525cd;
+}
+
+.continue-button {
+  width: 100%;
+  height: 54px;
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #3525cd;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.continue-button:hover {
+  background: #281cb4;
+}
+
+.continue-arrow {
+  width: 18px;
+  height: 18px;
+}
+
+.login-button {
+  width: 100%;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 24px 0;
+  background: #e5e7eb;
+}
+
+.support-text {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.support-link {
+  color: #3525cd;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .twostepverification-main {
+    flex-direction: column;
+  }
+
+  .left-container,
+  .two-step-right-container {
+    width: 100%;
+  }
+
+  .left-content {
+    margin-top: 0;
+  }
+
+  .left-container {
+    padding: 50px 32px;
+  }
+
+  .two-step-form {
+    max-width: 443px;
+    padding: 40px 24px;
+  }
+
+  .left-heading {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .left-description {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
