@@ -257,12 +257,12 @@
     border-right:1px solid #ddd;
 }
 
-.phone-wrapper input{
+.phone-number input{
     border:none;
     flex:1;
 }
 
-.password-wrapper{
+.password-number{
     display:flex;
     align-items:center;
     border:1px solid #d8d8d8;
@@ -270,7 +270,7 @@
     overflow:hidden;
 }
 
-.password-wrapper input{
+.password-number input{
     border:none;
     flex:1;
 }
@@ -282,7 +282,7 @@
     cursor:pointer;
 }
 
-.password-wrapper:focus-within{
+.password-number:focus-within{
     border-color:#2E5AC7;
 }
 

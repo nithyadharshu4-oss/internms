@@ -58,7 +58,7 @@ const [errors, setErrors] = useState({});
     newErrors.email = "Enter a valid email address";
   }
 
-  if (!form.phone.trim()) {
+  if (!form.phone.trim()) {  
     newErrors.phone = "Phone Number is required";
   } else if (!/^[6-9]\d{9}$/.test(form.phone)) {
     newErrors.phone = "Enter a valid 10-digit mobile number";
