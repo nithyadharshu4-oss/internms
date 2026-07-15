@@ -11,7 +11,6 @@ import smarttracking from"../assets/registration/smarttracking.png";
 import verified from "../assets/registration/verifiedemployees.png";
 
 
-
 export const InternRegistration =() => {
     const navigate = useNavigate();
 
@@ -182,6 +181,23 @@ const [errors, setErrors] = useState({});
 
 <div className="intern-form-row">
   <div className="intern-input-group">
+    <label>
+      Full Name <span>*</span>
+    </label>
+
+    <input
+      type="text"
+      name="fullName"
+      placeholder="Enter your full name"
+      value={form.fullName}
+      onChange={handleChange}
+    />
+
+    {errors.fullName && (
+      <p className="error">{errors.fullName}</p>
+    )}
+  </div>
+  <div className="intern-input-group">
     <label>Email Address <span>*</span></label>
     <input
       type="email"
@@ -196,7 +212,7 @@ const [errors, setErrors] = useState({});
   <div className="intern-input-group">
     <label>Phone Number <span>*</span></label>
 
-    <div className="phone-wrapper">
+    <div className="phone-number">
       <span className="country-code">+91</span>
 
       <input
@@ -209,6 +225,23 @@ const [errors, setErrors] = useState({});
     </div>
 
     {errors.phone && <p className="error">{errors.phone}</p>}
+  </div>
+   <div className="intern-input-group">
+    <label>
+      Date of Birth <span>*</span>
+    </label>
+
+    <input
+      type="date"
+      name="dob"
+      value={form.dob}
+      onChange={handleChange}
+    />
+
+    {errors.dob && (
+      <p className="error">{errors.dob}</p>
+    )}
+
   </div>
 </div>
 
@@ -355,10 +388,6 @@ const [errors, setErrors] = useState({});
     Sign In
   </span>
 </p>
-
-
-
-
 </form>
 </div>
 </div>
