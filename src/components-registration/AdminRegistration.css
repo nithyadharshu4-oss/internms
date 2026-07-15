@@ -1,0 +1,57 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.admin-registration-main{
+    display: flex;
+}
+.admin-registration-container{
+    width: 45%;
+    background: linear-gradient(to bottom, #16224B, #26569F);
+    color: white;
+    padding: 70px 70px;
+}
+.admin-left-content{
+       margin-top: 40px;
+       color:white;
+        margin-top: 30px;
+
+}
+.admin-left-content h1{
+    font-weight: 700;
+    margin-bottom:20px;
+    color: #FFFFFF;
+
+}
+.admin-left-content p{
+   font-weight: 400;
+    font-size: 18px;
+    color:#FFFFFF;
+}
+.admin-left-content img{
+    width: 350px;
+    height: 350px;
+    border-radius: 12px;
+    padding: 18px;                      
+}
+.admin-image img{
+    padding: 20px;
+    margin: 10px solid rgb(15, 15, 223);
+
+}
+.admin-image-content{
+    margin-top: 50px; 
+     gap:16px;  
+}
+.admin-image-content img{
+              width:10px;
+              height:10px;
+}
+.admin-image-content h6{
+    font-weight: 600;
+    color: #FFFFFF;
+}
+.admin-image-content p{
+    font-weight: 400;
+    color: #FFFFFF;
+}
