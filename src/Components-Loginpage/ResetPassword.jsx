@@ -67,7 +67,7 @@ export const ResetPassword=()=> {
 
           <div className="copyright-section">
             <span className="copyright-text">
-              © 2024 InternMS
+              &copy; 2024 InternMS
             </span>
 
             <span className="copyright-divider">
