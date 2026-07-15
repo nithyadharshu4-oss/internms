@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./VerificationCode.css";
 
-import securityIcon from "../assets/Loginpage/shield-blue.png";
+import securityIcon from "../assets/Loginpage/protect-blue.png";
 import arrowIcon from "../assets/Loginpage/right-arrow-white.png";
 
 const RESEND_SECONDS = 58;
