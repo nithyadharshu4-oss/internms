@@ -6,7 +6,7 @@
     display:flex;
 }
 .intern-left-container {
-    width: 40%;
+    width: 45%;
     background: linear-gradient(to bottom, #16224B, #26569F);
     color: white;
     padding: 70px 70px;
@@ -73,7 +73,7 @@
     align-items:center ;
 }
 .intern-right-container{
-          width:55%;
+          width:50%;
           padding:40px;
           margin-left: 20px;
 }
@@ -257,30 +257,39 @@
     border-right:1px solid #ddd;
 }
 
-.phone-number input{
-    border:none;
-    flex:1;
-}
+
+
 
 .password-number{
-    display:flex;
-    align-items:center;
-    border:1px solid #d8d8d8;
-    border-radius:10px;
-    overflow:hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .password-number input{
-    border:none;
-    flex:1;
+    width: 100%;
+    padding: 13px 45px 13px 15px;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    background: #fff;
+}
+
+.password-number input:focus{
+    border-color: #2E5AC7;
 }
 
 .eye-icon{
-    width:22px;
-    height:22px;
-    margin-right:15px;
-    cursor:pointer;
+    position: absolute;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    object-fit: contain;
 }
+
 
 .password-number:focus-within{
     border-color:#2E5AC7;
@@ -343,27 +352,26 @@
 .register-btn:hover{
     background:#2149ad;
 }
-
 .divider{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin:28px 0;
+    display: flex;
+    align-items: center;
+    margin: 28px 0;
 }
 
 .divider::before,
 .divider::after{
-    content:"";
-    flex:1;
-    height:1px;
-    background:#ddd;
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
 }
 
 .divider span{
-    color:#888;
-    font-size:14px;
+    padding: 0 3px;   
+    color: #888;
+    font-size: 14px;
+    background: #fff; 
 }
-
 .signin-text{
     text-align:center;
     font-size:14px;
@@ -388,6 +396,12 @@
 .footer-links{
     display:flex;
     align-items:center;
+}
+.error{
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 500;
 }
 
 @media(max-width:992px){

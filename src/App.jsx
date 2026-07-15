@@ -12,6 +12,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HRregistration } from "./components-registration/HRregistration";
 import { MentorRegistration } from "./components-registration/MentorRegistration";
 import {InternRegistration} from "./components-registration/InternRegistration";
+import {CompanyRegistration} from "./components-registration/CompanyRegistration";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
 {
   path:"/InternRegistration",
   element:<InternRegistration/>
+},
+{
+  path:"/CompanyRegistration",
+  element:<CompanyRegistration/>
 }
 ]);
 

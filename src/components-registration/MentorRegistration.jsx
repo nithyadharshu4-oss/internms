@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./MentorRegistration.css";
+import "./MentorRegistration.css"
 import protect from "../assets/registration/protect.png"
 import people from "../assets/registration/people.png"
 import star from "../assets/registration/star.png"
@@ -10,7 +10,7 @@ import mentor from "../assets/registration/mentor.png";
 import intern from "../assets/registration/intern.png";
 import company from "../assets/registration/company.png";
 import eye from "../assets/registration/eye.png";
-
+import eyeClose from "../assets/registration/eyeclose.png";
 
 export const MentorRegistration =() => {
 
@@ -47,7 +47,9 @@ export const MentorRegistration =() => {
 
     const validate=()=>{
 
-        let newErrors={};        
+        let newErrors={};
+
+        
         if(!form.fullName.trim()){
 
             newErrors.fullName="Full name is required";
@@ -212,7 +214,7 @@ else if (form.confirmPassword !== form.password) {
         <p>Intern</p>
       </div>
 
-      <div className="register-box" onClick={() => navigate("/company-registration")}>
+      <div className="register-box" onClick={() => navigate("/CompanyRegistration")}>
         <img src={company} alt="" />
         <p>Company</p>
       </div>
@@ -375,10 +377,11 @@ setForm({...form,phone:value});
           />
 
           <img
-            src={eye}
-            alt=""
-            onClick={() => setShowPassword(!showPassword)}
-          />
+  src={showPassword ? eyeClose : eye}
+  alt="eye"
+  className="eye-icon"
+  onClick={() => setShowPassword(!showPassword)}
+/>
 
         </div>
 
@@ -400,11 +403,12 @@ setForm({...form,phone:value});
             onChange={handleChange}
           />
 
-          <img
-            src={eye}
-            alt=""
-            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-          />
+         <img
+  src={showConfirmPassword ? eyeClose : eye}
+  alt="eye"
+  className="eye-icon"
+  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+/>
 
         </div>
 

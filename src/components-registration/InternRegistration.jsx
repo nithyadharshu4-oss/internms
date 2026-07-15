@@ -6,6 +6,7 @@ import mentor from "../assets/registration/mentor.png";
 import intern from "../assets/registration/intern.png";
 import company from "../assets/registration/company.png";
 import eye from "../assets/registration/eye.png";
+import eyeClose from "../assets/registration/eyeclose.png";
 import user from "../assets/registration/user.png";
 import smarttracking from"../assets/registration/smarttracking.png";
 import verified from "../assets/registration/verifiedemployees.png";
@@ -13,11 +14,14 @@ import verified from "../assets/registration/verifiedemployees.png";
 
 export const InternRegistration =() => {
     const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
+const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-    const [form, setForm] = useState({
+   const [form, setForm] = useState({
   fullName: "",
   email: "",
   phone: "",
+  dob: "",
   college: "",
   field: "",
   graduationYear: "",
@@ -41,15 +45,17 @@ const handleChange = (e) => {
 };
 
 const [errors, setErrors] = useState({});
-    const validate = () => {
+  const validate = () => {
   let newErrors = {};
 
+  // Full Name
   if (!form.fullName.trim()) {
     newErrors.fullName = "Full Name is required";
   } else if (!/^[A-Za-z ]+$/.test(form.fullName)) {
     newErrors.fullName = "Only letters are allowed";
   }
 
+  // Email
   if (!form.email.trim()) {
     newErrors.email = "Email Address is required";
   } else if (
@@ -58,51 +64,58 @@ const [errors, setErrors] = useState({});
     newErrors.email = "Enter a valid email address";
   }
 
-  if (!form.phone.trim()) {  
+  // Phone
+  if (!form.phone.trim()) {
     newErrors.phone = "Phone Number is required";
   } else if (!/^[6-9]\d{9}$/.test(form.phone)) {
     newErrors.phone = "Enter a valid 10-digit mobile number";
   }
 
-  if (!form.professionalTitle.trim()) {
-    newErrors.professionalTitle = "Professional Title is required";
+  // Date of Birth
+  if (!form.dob) {
+    newErrors.dob = "Date of Birth is required";
   }
 
-  if (!form.skills.trim()) {
-    newErrors.skills = "Skills / Expertise is required";
+  // College
+  if (!form.college.trim()) {
+    newErrors.college = "College Name is required";
   }
 
-  if (!form.experience) {
-    newErrors.experience = "Select your experience";
+  // Field of Study
+  if (!form.field) {
+    newErrors.field = "Field of Study is required";
   }
 
-  if (!form.bio.trim()) {
-    newErrors.bio = "Bio is required";
-  } else if (form.bio.length < 20) {
-    newErrors.bio = "Bio must contain at least 20 characters";
-  } else if (form.bio.length > 500) {
-    newErrors.bio = "Maximum 500 characters allowed";
+  // Graduation Year
+  if (!form.graduationYear) {
+    newErrors.graduationYear = "Graduation Year is required";
   }
 
+  // Resume
+  if (!form.resume) {
+    newErrors.resume = "Resume is required";
+  }
+
+  // Password
   if (!form.password) {
     newErrors.password = "Password is required";
   } else if (
-    !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{8,}$/.test(
-      form.password
-    )
+    !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{8,}$/.test(form.password)
   ) {
     newErrors.password =
-      "Password must contain uppercase, lowercase, number and special character";
+      "Minimum 8 characters, uppercase, lowercase, number & special character";
   }
 
+  // Confirm Password
   if (!form.confirmPassword) {
     newErrors.confirmPassword = "Confirm Password is required";
   } else if (form.password !== form.confirmPassword) {
     newErrors.confirmPassword = "Passwords do not match";
   }
 
+  // Terms
   if (!form.agree) {
-    newErrors.agree = "Please accept the Terms of Service";
+    newErrors.agree = "Please accept Terms & Privacy Policy";
   }
 
   setErrors(newErrors);
@@ -169,10 +182,10 @@ const [errors, setErrors] = useState({});
                     <p>Mentor</p>
                 </div>
                 <div className='register-box active'>
-                    <img src={intern} alt=""/>
+                    <img src={intern} alt="" onClick={()=> navigate("/InternRegistration")}/>
                     <p>Intern</p>
                 </div>
-                <div className='register-box' onClick={()=> navigate("/company-registration")}>   
+                <div className='register-box' onClick={()=> navigate("/CompanyRegistration")}>   
                 <img src={company} alt=""/>
                 <p>company</p>
                 </div>
@@ -317,45 +330,57 @@ const [errors, setErrors] = useState({});
 </div>
 
 <div className="intern-form-row">
-  <div className="intern-input-group">
-    <label>Password <span>*</span></label>
+ <div className="intern-input-group">
+  <label>Password <span>*</span></label>
 
-    <div className="password-wrapper">
-      <input
-        type="password"
-        name="password"
-        placeholder="Create a password"
-        value={form.password}
-        onChange={handleChange}
-      />
+  <div className="password-number">
+    <input
+      type={showPassword ? "text" : "password"}
+      name="password"
+      placeholder="Create a password"
+      value={form.password}
+      onChange={handleChange}
+    />
 
-      <img src={eye} alt="eye" className="eye-icon" />
-    </div>
-
-    {errors.password && (
-      <p className="error">{errors.password}</p>
-    )}
+    <img
+      src={showPassword ? eyeClose : eye}
+      alt="eye"
+      className="eye-icon"
+      onClick={() => setShowPassword(!showPassword)}
+    />
   </div>
 
-  <div className="intern-input-group">
-    <label>Confirm Password <span>*</span></label>
+  {errors.password && (
+    <p className="error">{errors.password}</p>
+  )}
+</div>
 
-    <div className="password-wrapper">
-      <input
-        type="password"
-        name="confirmPassword"
-        placeholder="Confirm password"
-        value={form.confirmPassword}
-        onChange={handleChange}
-      />
+<div className="intern-input-group">
+  <label>Confirm Password <span>*</span></label>
 
-      <img src={eye} alt="eye" className="eye-icon" />
-    </div>
+  <div className="password-number">
+    <input
+      type={showConfirmPassword ? "text" : "password"}
+      name="confirmPassword"
+      placeholder="Confirm password"
+      value={form.confirmPassword}
+      onChange={handleChange}
+    />
 
-    {errors.confirmPassword && (
-      <p className="error">{errors.confirmPassword}</p>
-    )}
+    <img
+      src={showConfirmPassword ? eyeClose : eye}
+      alt="eye"
+      className="eye-icon"
+      onClick={() =>
+        setShowConfirmPassword(!showConfirmPassword)
+      }
+    />
   </div>
+
+  {errors.confirmPassword && (
+    <p className="error">{errors.confirmPassword}</p>
+  )}
+</div>
 </div>
 
 <div className="terms">
