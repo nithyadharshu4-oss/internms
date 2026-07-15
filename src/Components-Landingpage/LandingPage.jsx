@@ -1,4 +1,4 @@
-import React from'react'
+import React , { useState }  from'react'
 import {Navbar} from "./Navbar";
 import nextgensparkle from "../assets/Landingpage/icon-sparkle.png";
 import arrow from "../assets/Landingpage/right-arrow-white.png";
@@ -13,6 +13,7 @@ import office from"../assets/Landingpage/office-image.png";
 import {Footer} from "./Footer";
 import "./LandingPage.css";
 export const LandingPage=()=> {
+  const [activeTab, setActiveTab] = useState("Students");
   return (
     <div>
       <Navbar />
@@ -169,9 +170,24 @@ opportunities.The definitive operating system for
       </div>
 
       <div className="category-buttons">
-        <button className="active">Students</button>
-        <button>Employers</button>
-        <button>Universities</button>
+         <button className={activeTab === "Students" ? "active" : ""}
+         onClick={() => setActiveTab("Students")}>
+          Students
+  </button>
+
+  <button
+    className={activeTab === "Employers" ? "active" : ""}
+    onClick={() => setActiveTab("Employers")}
+  >
+    Employers
+  </button>
+
+  <button
+    className={activeTab === "Universities" ? "active" : ""}
+    onClick={() => setActiveTab("Universities")}
+  >
+    Universities
+  </button>
       </div>
 
     </div>
