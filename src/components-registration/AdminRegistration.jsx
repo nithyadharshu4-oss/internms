@@ -1,6 +1,6 @@
 import React from 'react';
 import adminlap from "../assets/registration/adminlap.png";
-import shield from "../assets/registration/shield.png";
+import protectwhite from "../assets/registration/protectwhite.png";
 import secure from "../assets/registration/secure.png";
 import "./AdminRegistration.css";
 export  const AdminRegistration=() =>{
@@ -18,7 +18,7 @@ export  const AdminRegistration=() =>{
 
         </div>
         <div className='admin-image-content'>
-            <img src={shield} alt="shield" />
+            <img src={protectwhite} alt="protectwhite" />
             <div>
                 <h6>Role-based access</h6>
                 <p>Secure and personalized experience for every user.</p>
