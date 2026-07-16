@@ -25,10 +25,10 @@ export const LandingPage=()=> {
 </div>
       <h1>
       <span style={{color:"Black"}}>Seamless</span> <br />
-     <span style={{color:"Black"}}>Internships.</span> <br />
-     <span>Smarter</span><br />
-     <span>Management.</span> <br />
-     <hr className="hero-line" />
+     <span style={{color:"Black"}}>Internships.</span> <br/>
+     <span>Smarter</span><br/>
+     <span>Management.</span> <br/>  
+     <hr className="hero-line"   />
    </h1>
 
     <p>
