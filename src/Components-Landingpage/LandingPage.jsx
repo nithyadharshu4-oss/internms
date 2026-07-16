@@ -59,33 +59,33 @@ opportunities.The definitive operating system for
   </div>
 </div>  
     </section>   
-    <section className='status'>
-    <div className="sts-box">
+    <section className='landing-status'>
+    <div className="landing-sts-box">
     <h2>500+</h2>
     <p>UNIVERSITIES</p>
      </div>
 
-    <div className="sts-box">
+    <div className="landing-sts-box">
     <h2>10k+</h2>
     <p> GLOBAL COMPANIES</p>
      </div>
- <div className="sts-box">
+ <div className="landing-sts-box">
     <h2>1M+</h2>
     <p>PLACEMENTS</p>
      </div>
     </section>
-<section className="features">
-  <h2 className="feature-heading">
+<section className="landing-features">
+  <h2 className="landing-feature-heading">
     Engineered for Efficiency
   </h2>
-<div className='features-link'>
-  <p className='features-p'>Complex placement workflows simplified into an intuitive, high -speed ecosystem <br />designed for scale.</p>
+<div className='landing-features-link'>
+  <p className='landing-features-p'>Complex placement workflows simplified into an intuitive, high -speed ecosystem <br />designed for scale.</p>
 
   <a href="#">Explore all features <img  className='bluearrow' src={bluearrow} alt="arrow" /></a>
 </div>
-  <div className="feature-container">
+  <div className="landing-feature-container">
 
-    <div className="feature-card">
+    <div className="landing-feature-card">
       <img src={automated} alt="automated" className="icon" />
 
       <h3>Automated Matching</h3>
@@ -96,7 +96,7 @@ opportunities.The definitive operating system for
       </p>
     </div>
 
-    <div className="feature-card">
+    <div className="landing-feature-card">
       <img src={realtime} alt="realtime" className="icon" />
 
       <h3>Real-time Tracking</h3>
@@ -108,7 +108,7 @@ opportunities.The definitive operating system for
     </p>
     </div>
 
-    <div className="feature-card">
+    <div className="landing-feature-card">
       <img src={secure} alt="secure" className="icon" />
 
       <h3>Secure Documents</h3>

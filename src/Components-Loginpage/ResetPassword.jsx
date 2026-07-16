@@ -71,12 +71,10 @@ export const ResetPassword=()=> {
             </span>
 
             <span className="copyright-divider">
-              &nbsp;•&nbsp;
+              &nbsp;•&nbsp; Privacy Policy
             </span>
 
-            <a href="#" className="privacy-link">
-              Privacy Policy
-            </a>
+     
           </div>
         </div>
       </div>
@@ -84,7 +82,7 @@ export const ResetPassword=()=> {
       <div className="setup-right">
         <div className="setup-card">
           
-          <div className="dummy">
+          <div className="secure-reset">
          <img src={secure} alt="secure" /></div>
           <h2>Set New Password</h2>
 

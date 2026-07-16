@@ -138,7 +138,7 @@ body{
     font-size:14px;
     cursor:pointer;
 }
-.status{
+.landing-status{
     width:100%;
     background:#FFFFFF;
     display:flex;
@@ -149,18 +149,18 @@ body{
 }
 
 
-.sts-box{
+.landing-sts-box{
     text-align:center;
 }
 
-.sts-box h2{
+.landing-sts-box h2{
     font-size:36px;
     font-weight:900;
     margin-bottom:2px;
     letter-spacing:2px;
 }
 
-.sts-box p{
+.landing-sts-box p{
     font-size:10px;
     font-weight: 500px;
     letter-spacing:0.5px;
@@ -168,13 +168,13 @@ body{
 }
 
 
-.features {
+.landing-features {
   background:linear-gradient(to right, #D3E4FE4D, #0058BE0D);
   padding: 50px 0 20px;
 }
 
-.feature-heading,
-.features-link {
+.landing-feature-heading,
+.landing-features-link {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
@@ -182,13 +182,13 @@ body{
   box-sizing: border-box;
 }
 
-.features-link{
+.landing-features-link{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.features-link a{
+.landing-features-link a{
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -196,36 +196,36 @@ body{
     background-color: white;
     padding: 10px 20px;
     text-align: center;
-    border: 1px solid #cfe1ff;
-    border-radius: 30px;
+    border-bottom: 1px solid #cfe1ff;
+   
     color: #0058BE;
     font-size: 13px;
     font-weight: 500;
     white-space: nowrap;
 }
 
-.features-link a:hover{
+.landing-features-link a:hover{
     background-color: #e9f2ff;
 }
 
-.feature-heading {
+.landing-feature-heading {
   font-size: 36px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-.features-p{
+.landing-features-p{
     color: #45464D;
     font-size: 12px;
     margin-bottom: 30px;
 }
-.features p{
+.landing-feature-container .landing-feature-card p{
     color: #4e4e4f;
     letter-spacing: 0.2px;
     font-size: 14px;
 }
 
-.feature-container {
+.landing-feature-container {
   max-width: 1280px;
   margin: 48px auto 0;
   padding: 0 80px;
@@ -233,7 +233,7 @@ body{
   display: flex;
   gap: 130px;
 }
-.feature-card {
+.landing-feature-card {
   height: auto;
   min-height: 220px;
   width: 395px;
@@ -250,7 +250,7 @@ body{
 }
 
 
-.feature-card h3 {
+.landing-feature-card h3 {
   font-size: 22px;
   color: #111827;
   margin-bottom: 14px;
@@ -258,12 +258,12 @@ body{
 }
 
 
-.feature-card ul {
+.landing-feature-card ul {
   padding-left: 20px;
   margin: 0;
 }
 
-.feature-card li {
+.landing-feature-card li {
   color: #6b7280;
   font-size: 14px;
   line-height: 1;

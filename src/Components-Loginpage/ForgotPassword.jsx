@@ -12,8 +12,8 @@ export const ForgotPassword=() =>{
 
   return (
     <div className="main">
-      <div className="left-container">
-        <div className="left-heading">
+      <div className="forgot-left-container">
+        <div className="forgot-left-heading">
           <h1>
             Regain access to
             <br />
@@ -31,9 +31,9 @@ export const ForgotPassword=() =>{
           </p>
         </div>
 
-        <p className="copyright">
+        <span className="forgot-copyright">
           ©2024 InternMS &nbsp; • &nbsp; Privacy Policy
-        </p>
+        </span>
       </div>
 
       <div className="right-container">

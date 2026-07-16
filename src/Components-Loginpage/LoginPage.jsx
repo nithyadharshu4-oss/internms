@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Loginpage.css";
+import "./LoginPage.css";
 import mailIcon from "../assets/Loginpage/email.png";
 import lockIcon from "../assets/Loginpage/lock.png";
 import eyeIcon from "../assets/Loginpage/eye-on.png";
@@ -70,7 +70,7 @@ export const Login=()=> {
           </div>
           </div>
           </div>
-          <p className="copyright">&copy; 2024 InternMS.</p>
+          <p className="login-copyright">&copy; 2024 InternMS.</p>
         </div>
 
 <div className="right-container">
@@ -79,8 +79,8 @@ export const Login=()=> {
     <p className="subtitle">Manage your career journey.</p>
 
     <label>Email Address</label>
-    <div className="input-box">
-      <img src={mailIcon} alt="mail" className="input-icon" />
+    <div className="login-input-box">
+      <img src={mailIcon} alt="mail" className="login-input-icon" />
       <input
         type="email"
         placeholder="Enter Email address"
@@ -93,10 +93,10 @@ export const Login=()=> {
       <label>Password</label>
       <p className="forgot-password"
   onClick={() => navigate("/twostepverification")}>
-  Forgot Password</p>
+  Forgot Password?</p>
     </div>
-    <div className="input-box">
-      <img src={lockIcon} alt="lock" className="input-icon" />
+    <div className="login-input-box">
+      <img src={lockIcon} alt="lock" className="login-input-icon" />
       <input
         type={showPassword ? "text" : "password"}
         placeholder="Enter your password"
@@ -124,10 +124,16 @@ export const Login=()=> {
 
             <img src={arrow} alt="arrow" />
           </button>
-    <div className="divider">
-      <span>OR CONTINUE WITH</span>
-    </div>
+          <div>
+      <div className="divider">
 
+      <span></span>
+
+      <p>OR</p>
+
+      <span></span>
+</div>
+    </div>
     <button type="button" className="google-btn">
       <img src={googleIcon} alt="google" />
       Google
@@ -148,5 +154,3 @@ export const Login=()=> {
 </div>
   );
 }
-
-

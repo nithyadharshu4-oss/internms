@@ -21,8 +21,8 @@
 }
 
 .verification-code-leftcontent {
-  width: 430px;
-  height: 700px;
+  width: 500px;
+  height: 500px;
   border-radius: 20px;
   background: linear-gradient(192deg, #3d79ea 5.68%, #1b1a2d 95.19%);
   padding: 48px 40px;

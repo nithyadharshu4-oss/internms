@@ -25,16 +25,14 @@ export const TwoStepverification=()=>{
   };
 
   return (
-    <div className="twostepverification-main">
-      <div className="left-container">
-        <div className="left-content">
-          <h1 className="left-heading">
-            Secure Your
-            <br />
-            Account
+    <div className="twostep-verification-main">
+      <div className="twostep-left-container">
+        <div className="twostep-left-content">
+          <h1 className="twostep-left-heading">
+            Secure Your Account
           </h1>
 
-          <p className="left-description">
+          <p className="twostep-left-description">
             Protecting your professional profile and
             <br />
             application history is our top priority. Choose a
@@ -58,7 +56,7 @@ export const TwoStepverification=()=>{
           </div>
         </div>
        </div>
-        <p className="copyright">
+        <p className="login-twostep-copyright">
           &copy; 2024 InternMS
         </p>
       </div>
