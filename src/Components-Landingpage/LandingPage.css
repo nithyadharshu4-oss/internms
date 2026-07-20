@@ -292,7 +292,7 @@ body{
 }
 
 .student-heading {
-    font-size: 4rem;
+    font-size: 40px;
     line-height: 1.1;
     font-weight: 300;
     color: #111827;
@@ -303,11 +303,19 @@ body{
     color: #1d63d6;
 }
 
-.student-item {
+.landing-student-item {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
     margin-bottom: 4vh;
+}
+.landing-student-item h3{
+  font-size: 18px;
+  font-weight: 300;
+}
+.landing-student-item p{
+  font-size: 16px;
+
 }
 
 .step-number img,

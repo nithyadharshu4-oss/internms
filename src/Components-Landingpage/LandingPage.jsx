@@ -136,7 +136,7 @@ opportunities.The definitive operating system for
         <span>Your Career Launchpad.</span>
       </h2>
 
-      <div className="student-item">
+      <div className="landing-student-item">
         <div className="step-number"><img src={tick} alt="tick" /></div>
 
         <div>
@@ -147,7 +147,7 @@ opportunities.The definitive operating system for
         </div>
       </div>
 
-      <div className="student-item">
+      <div className="landing-student-item">
         <div className="step-number"><img src={tick} alt="tick" /></div>
 
         <div>
@@ -158,7 +158,7 @@ opportunities.The definitive operating system for
         </div>
       </div>
 
-      <div className="student-item">
+      <div className="landing-student-item">
         <div className="step-image"><img src={tick} alt="tick" /></div>
 
         <div>
