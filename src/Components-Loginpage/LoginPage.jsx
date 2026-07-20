@@ -141,7 +141,7 @@ export const Login=()=> {
 
     <p className="create">
       Don't have an account?
-      <a href="/signup"> Create Account</a>
+      <a href="/HRregistration"> Create Account</a>
     </p>
 
     <div className="footer-link">
