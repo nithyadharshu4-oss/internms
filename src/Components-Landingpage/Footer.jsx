@@ -1,7 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import iconGlobal from "../assets/Landingpage/global.png";
-import iconEmail from "../assets/Landingpage/mail.png";
+import iconEmail from "../assets/Landingpage/email.png";
+import heart from"../assets/Landingpage/heart.png";
 export const Footer=()=> {
   return (
     <footer className="footer">
@@ -28,6 +29,7 @@ export const Footer=()=> {
         </div>
 
         <div className="footer-links">
+          <div className="footer-column">
           <h3>Product</h3>
 
           <a href="#">For Students</a>
@@ -36,7 +38,7 @@ export const Footer=()=> {
           <a href="#">Pricing</a>
         </div>
 
-        <div className="footer-links">
+        <div className="footer-column">
           <h3>Company</h3>
 
           <a href="#">Privacy Policy</a>
@@ -45,13 +47,14 @@ export const Footer=()=> {
           <a href="#">Contact Us</a>
         </div>
       </div>
+      </div>
       <hr/>
 
       <div className="footer-bottom">
         <p>&copy; 2024 InternMS. All rights reserved.</p>
 
-        <p>
-          Made with <span className="footer-heart">&hearts;</span> for the future workforce
+     <p>
+          Made with <img src={heart} alt="heart" /> for the future workforce
         </p>
       </div>
     </footer>

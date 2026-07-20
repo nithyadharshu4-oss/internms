@@ -87,7 +87,9 @@ export const Login=()=> {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
+
     </div>
+    {errors.email && <p className="error">{errors.email}</p>}
 
     <div className="password-row">
       <label>Password</label>
@@ -95,6 +97,7 @@ export const Login=()=> {
   onClick={() => navigate("/twostepverification")}>
   Forgot Password?</p>
     </div>
+
     <div className="login-input-box">
       <img src={lockIcon} alt="lock" className="login-input-icon" />
       <input
@@ -110,7 +113,7 @@ export const Login=()=> {
         onClick={() => setShowPassword(!showPassword)}
       />
     </div>
-
+    {errors.password && <p className="error">{errors.password}</p>}
     <div className="remember">
       <input
         type="checkbox"

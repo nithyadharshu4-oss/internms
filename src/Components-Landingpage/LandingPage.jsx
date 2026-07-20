@@ -10,6 +10,7 @@ import realtime from"../assets/Landingpage/real-time-tracking.png";
 import secure from"../assets/Landingpage/secure-documents.png";
 import tick from"../assets/Landingpage/icon-checkmark.png";
 import office from"../assets/Landingpage/office-image.png";
+
 import {Footer} from "./Footer";
 import "./LandingPage.css";
 export const LandingPage=()=> {
@@ -140,7 +141,7 @@ opportunities.The definitive operating system for
         <div className="step-number"><img src={tick} alt="tick" /></div>
 
         <div>
-          <h3>One-click Applications</h3>
+          <h5>One-click Applications</h5>
           <p>
             Apply to top-tier firms instantly with your verified profile.
           </p>
@@ -151,7 +152,7 @@ opportunities.The definitive operating system for
         <div className="step-number"><img src={tick} alt="tick" /></div>
 
         <div>
-          <h3>AI Career Coaching</h3>
+          <h5>AI Career Coaching</h5>
           <p>
             Personalized insights to help you stand out and land the role.
           </p>
@@ -162,7 +163,7 @@ opportunities.The definitive operating system for
         <div className="step-image"><img src={tick} alt="tick" /></div>
 
         <div>
-          <h3>Verified Credentials</h3>
+          <h5>Verified Credentials</h5>
           <p>
             A portable digital record of your internship success.
           </p>
@@ -191,11 +192,12 @@ opportunities.The definitive operating system for
       </div>
 
     </div>
-
+<div>
     <div className="student-image-box">
+     
       <img src={office} alt="Office" />
     </div>
-   
+   </div>
   </div>
 
 </section>
