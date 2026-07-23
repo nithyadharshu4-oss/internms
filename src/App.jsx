@@ -8,13 +8,13 @@ import {ForgotPassword} from "./Components-Loginpage/ForgotPassword";
 import {ForgotPasswordOtp} from "./Components-Loginpage/ForgotPasswordOtp";
 import {ResetPassword} from "./components-Loginpage/ResetPassword";
 import {ResetPasswordSuccess} from"./Components-Loginpage/ResetPasswordSuccess";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { HRregistration } from "./components-registration/HRregistration";
 import { MentorRegistration } from "./components-registration/MentorRegistration";
 import {InternRegistration} from "./components-registration/InternRegistration";
 import {CompanyRegistration} from "./components-registration/CompanyRegistration";
 import {AdminRegistration} from "./components-registration/AdminRegistration";
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <LandingPage />,
