@@ -15,8 +15,9 @@ import {InternRegistration} from "./components-registration/InternRegistration";
 import {CompanyRegistration} from "./components-registration/CompanyRegistration";
 import {AdminRegistration} from "./components-registration/AdminRegistration";
 import { HrDashboard } from "./Components-Hr/HrDashboard";
-import { HrDashboardSidebar } from "./Components-Hr/HrDashboardSidebar";
-import { HrDashboardNav } from "./Components-Hr/HrDashboardNav";
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -73,16 +74,7 @@ const router = createBrowserRouter([
  {
     path:"/HrDashboard",
     element:<HrDashboard/>
-  },
-  {
-    path:"/HrDashboardSidebar",
-    element:<HrDashboardSidebar/>
-  },
-  {
-    path:"/HrDashboardNav",
-    element:<HrDashboardNav/>
   }
- 
 ],{
     basename: "/internms",
   }
