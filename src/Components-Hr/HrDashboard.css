@@ -88,7 +88,19 @@
     height: 40px;
     border-radius: 50%;
 }
-
+.hr-dashboard-sidebar-mini{
+    width:85px;
+    height:100vh;
+    background:#00328D;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    overflow:hidden;
+    transition:0.3s ease;
+}
 .hr-dashboard-sidebar-profile-left h4{
     font-size: 14px;
     font-weight: 600;
