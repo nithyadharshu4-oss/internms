@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import iconGlobal from "../assets/Landingpage/global.png";
-import iconEmail from "../assets/Landingpage/email.png";
+import iconEmail from "../assets/Landingpage/mail.png";
 import heart from"../assets/Landingpage/heart.png";
 export const Footer=()=> {
   return (

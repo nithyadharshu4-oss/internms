@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import "./Companylogin.css";
-import mail from "../assets/Loginpage/email.png";
-import lock from "../assets/Loginpage/lock.png";
-import eye from "../assets/Loginpage/eye-on.png";
-import eyeOffIcon from "../assets/Loginpage/eye-off.png";
-import google from "../assets/Loginpage/google.png";
-import arrow from "../assets/Loginpage/right-arrow-white.png"
+import "./CompanyLoginpage.css";
+import mail from "../assets/loginpage/mail.png";
+import lock from "../assets/loginpage/lock.png";
+import eye from "../assets/loginpage/eye.png";
+import eyeClose from "../assets/loginpage/eyeclose.png";
+import google from "../assets/loginpage/google.png";
+import arrow from "../assets/loginpage/arrow.png";
 import { useNavigate } from "react-router-dom";
 
-export const Companylogin=()=> {
+
+export const HrLoginpage=()=> {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -49,6 +50,7 @@ export const Companylogin=()=> {
         email,
         password,
       });
+      navigate("/HRdashboard");
     }
   };
 

@@ -1,167 +1,125 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./TwoStepVerification.css";
+import { Link, useNavigate } from "react-router-dom";
+import "./TwoStepverification.css"
+import protect from "../assets/loginpage/protect.png"
+import twostepmail from "../assets/loginpage/twostepmail.png"
+import mobile from "../assets/loginpage/mobile.png"
+import arrow from "../assets/loginpage/arrow.png"
+import backarrow from "../assets/loginpage/backarrow.png"
 
-import securityIcon from "../assets/Loginpage/securityTsve.png";
-import emailIcon from "../assets/Loginpage/email-colour.png";
-import mobileIcon from "../assets/Loginpage/mobile.png";
-import leftArrow from "../assets/Loginpage/left-arrow-blue.png";
-import rightArrow from "../assets/Loginpage/right-arrow-white.png";
 
-export const TwoStepverification=()=>{
-  const navigate = useNavigate();
-  const [selectedMethod, setSelectedMethod] = useState("email");
-
-  const handleVerify = () => {
-    navigate("/VerificationCode", {
+export const TwoStepverification=() =>{
+    const [selected, setSelected] = useState("email");
+    const navigate = useNavigate();
+    const handleVerify = () => {
+  if (selected === "email") {
+    navigate("/verificationcode", {
       state: {
-        type: selectedMethod,
-        value:
-          selectedMethod === "email"
-            ? "j***n@gmail.com"
-            : "+91 9****5678",
+        type: "email",
+        value: "j***n@gmail.com",
       },
     });
-  };
+  } else {
+    navigate("/verificationcode", {
+      state: {
+        type: "mobile",
+        value: "+91 9****5678",
+      },
+    });
+  }
+};
+
 
   return (
-    <div className="twostep-verification-main">
-      <div className="twostep-left-container">
-        <div className="twostep-left-content">
-          <h1 className="twostep-left-heading">
-            Secure Your Account
-          </h1>
+    <div className='twostep-main'>
 
-          <p className="twostep-left-description">
-            Protecting your professional profile and
-            <br />
-            application history is our top priority. Choose a
-            <br />
-            method to verify your identity.
-          </p>
+        <div className='twostep-left-container'>
+            <div className='twostep-left-content'>
+                <h2>Secure Your Account</h2>
+                <p>Protecting your professional profile and <br />
+                   application history is our top priority. Choose a <br />
+                   method to verify your odentity.</p>
+                <div className='protect-align'>
+                <img src={protect} alt="protect" />
+                <div>
+                    <h5>265-bit Encryption</h5>
+                    <p>Bank-grade security standards</p>
+                </div>
+                
+                </div>
+            </div>
 
-          <div className="security-info">
-  <div>
-              <img
-                src={securityIcon}
-                alt="Security"
-                className="security-icon"
-              />
-              </div>
-
-            <div className="security-text">
-              <h4>256-bit Encryption</h4>
-              <p>Bank-grade security standards</p>
-           
-          </div>
+             <p className="copyright">&copy; 2024 InternMS</p>
         </div>
-       </div>
-        <p className="login-twostep-copyright">
-          &copy; 2024 InternMS
+
+
+
+        <div className='twostep-right-container'>
+         <div>
+            <h1>Two-Step Verification</h1>
+            <p>Choose how you'd like to verify identity.</p>
+         </div>
+        
+
+         <div
+          className={`verify-option ${selected === "email" ? "active" : ""}`}
+          onClick={() => setSelected("email")}
+        >
+          <div className="option-left">
+            <div className="icon-box">
+              <img src={twostepmail} alt="mail" />
+            </div>
+
+            <div>
+              <h4>Email Verification</h4>
+              <p>j***n@gmail.com</p>
+            </div>
+          </div>
+
+          <input
+            type="radio"
+            checked={selected === "email"}
+            readOnly
+          />
+        </div>
+
+        <div
+          className={`verify-option ${selected === "mobile" ? "active" : ""}`}
+          onClick={() => setSelected("mobile")}
+        >
+          <div className="option-left">
+            <div className="icon-box">
+              <img src={mobile} alt="mobile" />
+            </div>
+
+            <div>
+              <h4>Mobile Verification</h4>
+              <p>+91 9****5678</p>
+            </div>
+          </div>
+
+          <input
+            type="radio"
+            checked={selected === "mobile"}
+            readOnly
+          />
+        </div>
+
+        <button className="verify-btn" onClick={handleVerify}>
+  Send Verification Code <img className="arrow" src={arrow} alt="arrow"/>
+</button>
+
+        <Link to="/login" className="back-link">
+          <img className="arrow" src={backarrow} alt="backarrow" /> Back to Login
+        </Link>
+
+        <hr />
+
+        <p className="support">
+          Need help? <span>Contact Support</span>
         </p>
+
       </div>
-       
-
-      <div className="two-step-right-container">
-        <div className="two-step-form">
-          <h2 className="form-title">
-            Two-Step Verification
-          </h2>
-
-          <p className="form-subtitle">
-            Choose how you'd like to verify your identity.
-          </p>
-
-          <div
-            className={`verification-card ${
-              selectedMethod === "email" ? "active" : ""
-            }`}
-            onClick={() => setSelectedMethod("email")}
-          >
-            <div className="card-left">
-              <div className="card-icon-wrapper">
-                <img
-                  src={emailIcon}
-                  alt="Email"
-                  className="card-icon"
-                />
-              </div>
-
-              <div className="card-details">
-                <h3>Email Verification</h3>
-                <p>j**n@g***l.com</p>
-              </div>
-            </div>
-
-            <div
-              className={`radio-button ${
-                selectedMethod === "email" ? "selected" : ""
-              }`}
-            ></div>
-          </div>
-
-          <div
-            className={`verification-card ${
-              selectedMethod === "mobile" ? "active" : ""
-            }`}
-            onClick={() => setSelectedMethod("mobile")}
-          >
-            <div className="card-left">
-              <div className="card-icon-wrapper">
-                <img
-                  src={mobileIcon}
-                  alt="Mobile"
-                  className="card-icon"
-                />
-              </div>
-
-              <div className="card-details">
-                <h3>Mobile Verification</h3>
-                <p>+91 9****5678</p>
-              </div>
-            </div>
-
-            <div
-              className={`radio-button ${
-                selectedMethod === "mobile" ? "selected" : ""
-              }`}
-            ></div>
-          </div>
-
-          <button
-            className="continue-button"
-            type="button"
-            onClick={handleVerify}
-          >
-            Send Verification Code
-
-            <img
-              src={rightArrow}
-              alt="Arrow"
-              className="continue-arrow"
-            />
-          </button>
-
-          <button
-            className="login-button"
-            type="button"
-            onClick={() => navigate("/login")}
-          >
-            <img src={leftArrow} alt="Back" />
-            Back to Login
-          </button>
-
-          <div className="divider"></div>
-
-          <p className="support-text">
-            Need help?{" "}
-            <span className="support-link">
-              Contact Support
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+        </div>     
+  )
 }
-

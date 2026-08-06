@@ -1,15 +1,15 @@
 import React , { useState }  from'react'
 import {Navbar} from "./Navbar";
-import nextgensparkle from "../assets/Landingpage/icon-sparkle.png";
-import arrow from "../assets/Landingpage/right-arrow-white.png";
-import laptopdashboard from"../assets/Landingpage/dashboard-laptop.png";
-import success from"../assets/Landingpage/increase.png";
-import bluearrow from "../assets/Landingpage/right-arrow-blue.png";
-import automated from"../assets/Landingpage/automated-matching.png";
-import realtime from"../assets/Landingpage/real-time-tracking.png";
-import secure from"../assets/Landingpage/secure-documents.png";
-import tick from"../assets/Landingpage/icon-checkmark.png";
-import office from"../assets/Landingpage/office-image.png";
+import nextgensparkle from "../assets/Landingpage/nextgen.png";
+import arrow from "../assets/Landingpage/arrow.png";
+import laptopdashboard from"../assets/Landingpage/imsdashboard.png";
+import success from"../assets/Landingpage/success.png";
+import bluearrow from "../assets/Landingpage/bluearrow.png";
+import automated from"../assets/Landingpage/automated.png";
+import realtime from"../assets/Landingpage/realtime.png";
+import secure from"../assets/Landingpage/secure.png";
+import tick from"../assets/Landingpage/tick.png";
+import office from"../assets/Landingpage/office.png";
 
 import {Footer} from "./Footer";
 import "./LandingPage.css";

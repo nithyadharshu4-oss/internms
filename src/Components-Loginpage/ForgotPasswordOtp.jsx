@@ -1,90 +1,98 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./ForgotPasswordOtp.css";
+import "./ForgotPasswordOtp.css"
+import protect from "../assets/loginpage/protect.png"
+import arrow from "../assets/loginpage/arrow.png"
+import lock2 from "../assets/loginpage/lock2.png"
+import protectcode from "../assets/loginpage/protectcode.png"
 
-import shieldIcon from "../assets/Loginpage/securityTsve.png";
-import rightArrow from "../assets/Loginpage/right-arrow-white.png";
-import secureHandshake from "../assets/Loginpage/SecureHandshake.png";
-import endEncrypted from "../assets/Loginpage/Endtoendencrypted.png";
 
 export const ForgotPasswordOtp=()=> {
-  const navigate = useNavigate();
+const navigate = useNavigate();
+   
+const inputs = useRef([]);
+const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+const [error, setError] = useState("");
 
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+const handleChange = (e, index) => {
+  const value = e.target.value;
+  if (!/^\d*$/.test(value)) return;
 
-  const handleChange = (value, index) => {
-    if (!/^[0-9]?$/.test(value)) return;
+  const newOtp = [...otp];
+  newOtp[index] = value;
+  setOtp(newOtp);
 
-    const newOtp = [...otp];
-    newOtp[index] = value;
-    setOtp(newOtp);
+  if (value && index < 5) {
+    inputs.current[index + 1].focus();
+  }
 
-    if (value && index < 5) {
-      document.getElementById(`otp-${index + 1}`)?.focus();
-    }
-  };
+  setError("");
+};
 
-  const handleVerify = () => {
-    const enteredOtp = otp.join("");
+const handleKeyDown = (e, index) => {
+  if (e.key === "Backspace" && otp[index] === "" && index > 0) {
+    inputs.current[index - 1].focus();
+  }
+};
 
-    if (enteredOtp.length !== 6) {
-      alert("Please enter the complete 6-digit verification code.");
-      return;
-    }
+const handleVerify = () => {
+  if (otp.some((digit) => digit === "")) {
+    alert("Please enter all 6 digits.");
+    return;
+  }
 
-    navigate("/resetpassword");
-  };
+  alert("OTP Verified");
+   navigate("/resetpassword");
+};
+
 
   return (
-    <div className="otp-page">
-      <div className="otp-left">
-        <div className="otp-left-content">
-          <div className="shield-circle">
-            <img src={shieldIcon} alt="Shield" />
-          </div>
+    <div className='main-container'>
 
-          <h1>Verify Identity</h1>
+        <div className='left-container'>
 
-          <p>
-            We've sent a 6-digit code to your chosen method.
-            <br />
-            Please enter it to continue.
-          </p>
+          <img src={protect} alt="protect" />  
+
+        <h1>Verify Identity</h1>   
+        <p>we're sent a 6-digit code to your choosen method. <br />
+        Please enter it to continue
+        </p>
+
         </div>
-      </div>
 
-      <div className="otp-right">
-        <div className="otp-card">
-          <h2>Enter Verification Code</h2>
+       <div className="right-container">
 
-          <p className="description">
+        <div className="otp-box">
+
+          <h1>Enter Verification Code</h1>
+
+          <p className="otp-text">
             We've sent a 6-digit code to your registered Email and phone
-            number. The code will expire in
-            <span> 09:59 </span>
-           minutes.
+            number. The code will <br />
+            expire in <span>09:59</span> minutes.
           </p>
 
-          <div className="otp-inputs">
-            {otp.map((digit, index) => (
-              <input
-                key={index}
-                id={`otp-${index}`}
-                type="text"
-                maxLength={1}
-                value={digit}
-                onChange={(e) => handleChange(e.target.value, index)}
-              />
-            ))}
-          </div>
+         <div className="otp-inputs">
+  {otp.map((digit, index) => (
+    <input
+      key={index}
+      type="text"
+      inputMode="numeric"
+      maxLength="1"
+      value={digit}
+      ref={(el) => (inputs.current[index] = el)}
+      onChange={(e) => handleChange(e, index)}
+      onKeyDown={(e) => handleKeyDown(e, index)}
+    />
+  ))}
+</div>
 
-          <button
-            className="verify-btn"
-            type="button"
-            onClick={handleVerify}
-          >
-            Verify and Continue
-            <img src={rightArrow} alt="Arrow" />
-          </button>
+{error && <p className="otp-error">{error}</p>}
+
+<button className="verify-btn" onClick={handleVerify}>
+  Verify and Continue
+  <img src={arrow} alt="" />
+</button>
 
           <p className="resend">
             Didn't receive the code?
@@ -94,25 +102,25 @@ export const ForgotPasswordOtp=()=> {
           <hr />
 
           <div className="security">
+
             <div>
-              <img
-                src={endEncrypted}
-                alt="End to End Encrypted"
-              />
+              <img src={lock2} alt="" />
               <span>END-TO-END ENCRYPTED</span>
             </div>
 
             <div>
-              <img
-                src={secureHandshake}
-                alt="Secure Handshake"
-              />
+              <img src={protectcode} alt="" />
               <span>SECURE HANDSHAKE</span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+      
+    
+  )
+}

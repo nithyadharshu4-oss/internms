@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./Login.css";
-import mail from "../assets/Loginpage/mail.png";
-import lock from "../assets/Loginpage/lock.png";
-import eye from "../assets/Loginpage/eye.png";
-import eyeClose from "../assets/Loginpage/eyeclose.png";
-import google from "../assets/Loginpage/google.png";
-import arrow from "../assets/Loginpage/arrow.png";
+import mail from "../assets/loginpage/mail.png";
+import lock from "../assets/loginpage/lock.png";
+import eye from "../assets/loginpage/eye.png";
+import eyeClose from "../assets/loginpage/eyeclose.png";
+import google from "../assets/loginpage/google.png";
+import arrow from "../assets/loginpage/arrow.png";
 import { useNavigate } from "react-router-dom";
 
-export const LoginPage=()=> {
+export const MentorLoginpage=()=> {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 

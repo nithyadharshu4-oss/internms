@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import "./Login.css";
-import mail from "../assets/Loginpage/mail.png";
-import lock from "../assets/Loginpage/lock.png";
-import eye from "../assets/Loginpage/eye.png";
-import eyeClose from "../assets/Loginpage/eyeclose.png";
-import google from "../assets/Loginpage/google.png";
-import arrow from "../assets/Loginpage/arrow.png";
+import "./CompanyLoginpage.css";
+import mail from "../assets/loginpage/mail.png";
+import lock from "../assets/loginpage/lock.png";
+import eye from "../assets/loginpage/eye.png";
+import eyeClose from "../assets/loginpage/eyeclose.png";
+import google from "../assets/loginpage/google.png";
+import arrow from "../assets/loginpage/arrow.png";
 import { useNavigate } from "react-router-dom";
 
-export const LoginPage=()=> {
+
+export const CompanyLoginpage=()=> {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -53,25 +54,20 @@ export const LoginPage=()=> {
   };
 
   return (
-    <div className="login-main">
-      <div className="leftside-container">
-        <div className="left-content">
-          <h1 className="logo">InternHub</h1>
+    <div className="company-login-main">
+      <div className="company-login-leftside-container">
+        <div className="company-login-left-content">
+          <h1 className="company-login-logo">HR and Company Portal</h1>
 
           <h2>
-            Your next big leap starts
-            <br />
-            here.
+           Empowering<br/>Growth<br/>through<br/>Innovation.
           </h2>
 
-          <p>
-            Connect with industry leaders, manage your <br />
-            applications, and accelerate your career path with our
-            <br />
-            comprehensive internship management platform.
-          </p>
+           <p>Connect with leaders, manage talent, and<br/>
+           drive your organization forward with our<br/>
+           unified platform.</p>
 
-          <div className="stats">
+          <div className="company-login-stats">
             <div>
               <h3>500+</h3>
               <span>PARTNER COMPANIES</span>
@@ -84,21 +80,21 @@ export const LoginPage=()=> {
           </div>
         </div>
 
-        <p className="copyright">&copy; 2024 InternMS</p>
+        <p className="company-login-copyright">&copy;2024 HR and Company Portal. All rights reserved.</p>
       </div>
 
-      <div className="rightside-container">
-        <form className="login-box" onSubmit={handleSubmit}>
+      <div className="company-login-rightside-container">
+        <form className="company-login-box" onSubmit={handleSubmit}>
           <h1>Welcome Back</h1>
 
-          <p className="subtitle">
+          <p className="company-login-subtitle">
             Manage your career journey.
           </p>
 
           <label>Email Address</label>
 
-          <div className="input-box">
-            <img src={mail} alt="mail" className="input-icon" />
+          <div className="company-login-input-box">
+            <img src={mail} alt="mail" className="company-login-input-icon" />
 
             <input
               type="email"
@@ -109,22 +105,22 @@ export const LoginPage=()=> {
           </div>
 
           {errors.email && (
-            <p className="error">{errors.email}</p>
+            <p className="company-login-error">{errors.email}</p>
           )}
 
-          <div className="password-row">
+          <div className="company-login-password-row">
             <label>Password</label>
 
            <p
-  className="forgot-link"
+  className="company-login-forgot-link"
   onClick={() => navigate("/twostepverification")}
 >
   Forgot Password?
 </p>
           </div>
 
-          <div className="input-box">
-            <img src={lock} alt="lock" className="lock-input-icon" />
+          <div className="company-login-input-box">
+            <img src={lock} alt="lock" className="company-login-lock-input-icon" />
 
             <input
               type={showPassword ? "text" : "password"}
@@ -136,7 +132,7 @@ export const LoginPage=()=> {
             <img
   src={showPassword ? eyeClose : eye}
   alt="eye"
-  className="eye-icon"
+  className="company-login-eye-icon"
   onClick={() => setShowPassword(!showPassword)}
 />
           </div>
@@ -145,19 +141,19 @@ export const LoginPage=()=> {
             <p className="error">{errors.password}</p>
           )}
 
-          <div className="remember">
+          <div className="company-login-remember">
             <input type="checkbox" />
 
             <span>Keep me signed in</span>
           </div>
 
-          <button className="signin-btn" type="submit">
+          <button className="company-login-signin-btn" type="submit">
             Sign In
 
             <img src={arrow} alt="arrow" />
           </button>
 
-            <div className="divider">
+            <div className="company-login-divider">
 
       <span></span>
 
@@ -167,17 +163,17 @@ export const LoginPage=()=> {
 
     </div>
 
-          <div className="google-align">
-            <button type="button" className="google-btn">
+          <div className="company-login-google-align">
+            <button type="button" className="company-login-google-btn">
               <img src={google} alt="google" />
               Google
             </button>
 
-            <p className="create">
+            <p className="company-login-create">
               Don't have an account?
 
               <span
-  className="create-link"
+  className="company-login-create-link"
   onClick={() => navigate("/HRregistration")}
 >
   Create Account
@@ -185,12 +181,12 @@ export const LoginPage=()=> {
             </p>
           </div>
 
-          <div className="footer-links">
-            <a href="">Help</a>
+          <div className="company-login-footer-links">
+            <a href="/">Help</a>
 
-            <a href="">Privacy</a>
+            <a href="/">Privacy</a>
 
-            <a href="">Terms</a>
+            <a href="/">Terms</a>
           </div>
         </form>
       </div>
