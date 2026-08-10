@@ -14,18 +14,21 @@
   padding:0 20px;
   border-bottom: 1px solid #eeeeee;
 }
+
 .landing-navbar-container{
   color: #0058BE;
   font-size: 28px;
   font-weight:900;
   cursor:pointer;
 }
+
 .landing-navbar-buttons{
 
   display:flex;
   gap:20px;
   align-items:center;
 }
+
 .landing-login-btn {
   display: inline-block;
   text-align: center;
@@ -38,6 +41,7 @@
   font-weight: 600;
   cursor: pointer;
 }
+
 .landing-register-btn {
   display: inline-block;
   padding: 16px 32px;

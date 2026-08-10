@@ -14,18 +14,19 @@ import notification from "../assets/hr-modules/activenotifications.png";
 import profile from "../assets/hr-modules/profile.png";
 import downarrow from "../assets/hr-modules/downarrow.png";
 import dashboard from "../assets/hr-modules/dashboard.png";
-import intern from "../assets/hr-modules/intern.png";
+import myprofile from "../assets/hr-modules/myprofile.png";
+import internIcon from "../assets/hr-modules/internIcon.png";
 import applications from "../assets/hr-modules/applications.png";
-import departments from "../assets/hr-modules/departments.png";
-import project from "../assets/hr-modules/project.png";
+import organization from "../assets/hr-modules/organization.png";
 import mentors from "../assets/hr-modules/mentors.png";
-import evaluations from "../assets/hr-modules/evaluations.png";
+import taskapprovals from "../assets/hr-modules/taskapprovals.png";
 import attendance from "../assets/hr-modules/attendance.png";
+import onboarding from "../assets/hr-modules/onboarding.png";
 import reports from "../assets/hr-modules/reports.png";
+import communications from "../assets/hr-modules/communications.png";
 import notifications from "../assets/hr-modules/notifications.png";
 import settings from "../assets/hr-modules/settings.png";
-import sidebarprofile from "../assets/hr-modules/sidebarprofile.png";
-import whitearrow from "../assets/hr-modules/whitearrow.png";
+
 import harsha from "../assets/hr-modules/harsha.png";
 import sukumar from "../assets/hr-modules/sukumar.png";
 import sai from "../assets/hr-modules/sai.png";
@@ -111,15 +112,16 @@ export const HrDashboard = () => {
   const [isOpen, setIsOpen] = useState(true);
 const menuItems = [
   { icon: dashboard, text: "Dashboard" },
-  { icon: intern, text: "Interns" },
+  {icon:myprofile,text:"My Profile"},
+  { icon: internIcon, text: "Interns" },
   { icon: applications, text: "Applications" },
-  { icon: departments, text: "Departments" },
-  { icon: project, text: "Projects" },
+  {icon:organization,text:"Organization"},
   { icon: mentors, text: "Mentors" },
-  { icon: evaluations, text: "Evaluations" },
+  { icon: taskapprovals, text: "Task & Approvals" },
   { icon: attendance, text: "Attendance" },
-  { icon: reports, text: "Reports" },
-  { icon: notifications, text: "Notifications" },
+  {icon:onboarding,text:"Onboarding"},
+  { icon: reports, text: "Reports&Analytics" },
+  { icon: communications, text: "Communications" },
   { icon: settings, text: "Settings" },
 ];
 
@@ -209,10 +211,7 @@ const CustomTooltip = ({ active, payload }) => {
 
 <div className={isOpen ? "hr-dashboard-sidebar" : "hr-dashboard-sidebar-mini"}>
 
-      <div className="hr-dashboard-logo-section">
-        <h2>Intern MS</h2>
-        <p>HR Dashboard</p>
-      </div>
+    
 
       <div className="hr-dashboard-menu-list">
 
@@ -229,24 +228,7 @@ const CustomTooltip = ({ active, payload }) => {
 
       </div>
 
-<div className="hr-dashboard-sidebar-profile">
 
-    <img src={sidebarprofile} alt="Sidebar Profile" />
-
-    {isOpen && (
-      <>
-        <div>
-          <h3>Sudhakar HR</h3>
-          <p>HR Manager</p>
-        </div>
-
-        <div className="hr-dashboard-sidebararrow">
-          <img src={whitearrow} alt="White Arrow" />
-        </div>
-      </>
-    )}
-
-</div>
     </div>
 
     <div className={isOpen ? "hr-dashboard-right" : "hr-dashboard-right mini"}>
@@ -256,8 +238,8 @@ const CustomTooltip = ({ active, payload }) => {
         <img src={menu} alt="Menu" onClick={toggleSidebar}  style={{cursor:"pointer"}}/>
 
         <div>
-          <h3 style={{color:"#003073"}}>Dashboard</h3>
-          <p>welcome back, Admin Here’s an overview of the internship ecosystem.</p>
+          <h3 style={{color:"#003073"}}>Welcome back, HR</h3>
+          <p>Welcome back, HR!</p>
         </div>
       </div>
 

@@ -11,26 +11,10 @@
     top: 0;
     overflow-y: auto;
 }
-
-.hr-dashboard-logo-section{
-    padding: 10px 20px;
-}
-
-.hr-dashboard-logo-section h2{
-    font-size: 26px;
-    font-weight: 700;
-  
-}
-
-.hr-dashboard-logo-section p{
-    font-size: 14px;
-    color: rgba(255,255,255,0.75);
-}
-
 .hr-dashboard-menu-list{
     display: flex;
     flex-direction: column;
-    padding: 0px 10px;
+    padding: 80px 10px;
     gap: 2px;
 }
 
@@ -61,47 +45,6 @@
 
 .hr-dashboard-menu-item.active{
     background: rgba(255,255,255,.18);
-  
-}
-
-.hr-dashboard-sidebar-footer{
-    padding: 15px;
-}
-
-.hr-dashboard-sidebar-profile{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(255,255,255,.12);
-    padding: 10px 12px;
-    border-radius: 10px;
-}
-
-.hr-dashboard-sidebar-profile-left{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.hr-dashboard-sidebar-profile-left img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.hr-dashboard-sidebar-profile-left h4{
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.hr-dashboard-sidebar-profile-left p{
-    font-size: 12px;
-    color: rgba(255,255,255,.75);
-}
-
-.hr-dashboard-sidebar-profile .down{
-    width: 14px;
-    height: 14px;
 }
 
 .hr-dashboard-sidebar::-webkit-scrollbar{
