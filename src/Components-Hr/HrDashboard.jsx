@@ -8,25 +8,6 @@ import calendar from "../assets/hr-modules/calendar.png";
 import folder from "../assets/hr-modules/folder.png";
 import monitor from "../assets/hr-modules/monitor.png";
 import feedback from "../assets/hr-modules/feedback.png";
-import menu from "../assets/hr-modules/menu.png";
-import search from "../assets/hr-modules/search.png";
-import notification from "../assets/hr-modules/activenotifications.png";
-import profile from "../assets/hr-modules/profile.png";
-import downarrow from "../assets/hr-modules/downarrow.png";
-import dashboard from "../assets/hr-modules/dashboard.png";
-import myprofile from "../assets/hr-modules/myprofile.png";
-import internIcon from "../assets/hr-modules/internIcon.png";
-import applications from "../assets/hr-modules/applications.png";
-import organization from "../assets/hr-modules/organization.png";
-import mentors from "../assets/hr-modules/mentors.png";
-import taskapprovals from "../assets/hr-modules/taskapprovals.png";
-import attendance from "../assets/hr-modules/attendance.png";
-import onboarding from "../assets/hr-modules/onboarding.png";
-import reports from "../assets/hr-modules/reports.png";
-import communications from "../assets/hr-modules/communications.png";
-import notifications from "../assets/hr-modules/notifications.png";
-import settings from "../assets/hr-modules/settings.png";
-
 import harsha from "../assets/hr-modules/harsha.png";
 import sukumar from "../assets/hr-modules/sukumar.png";
 import sai from "../assets/hr-modules/sai.png";
@@ -43,7 +24,6 @@ import shortlisted from "../assets/hr-modules/shortlisted.png";
 import selected from "../assets/hr-modules/selected.png";
 import rejected from "../assets/hr-modules/rejected.png";
 
-
 import {
   ResponsiveContainer,
   LineChart,
@@ -59,10 +39,6 @@ import {
 
 
 export const HrDashboard = () => {
-  
-  
-  const toggleSidebar = () => {setIsOpen(!isOpen);};
-
 
 
     const interns = [
@@ -108,25 +84,7 @@ export const HrDashboard = () => {
     }
   ];
 
-
-  const [isOpen, setIsOpen] = useState(true);
-const menuItems = [
-  { icon: dashboard, text: "Dashboard" },
-  {icon:myprofile,text:"My Profile"},
-  { icon: internIcon, text: "Interns" },
-  { icon: applications, text: "Applications" },
-  {icon:organization,text:"Organization"},
-  { icon: mentors, text: "Mentors" },
-  { icon: taskapprovals, text: "Task & Approvals" },
-  { icon: attendance, text: "Attendance" },
-  {icon:onboarding,text:"Onboarding"},
-  { icon: reports, text: "Reports&Analytics" },
-  { icon: communications, text: "Communications" },
-  { icon: settings, text: "Settings" },
-];
-
-
-  const lineData = [
+ const lineData = [
   { name: "May 06", interns: 35 },
   { name: "May 16", interns: 45 },
   { name: "May 26", interns: 62 },
@@ -207,75 +165,8 @@ const CustomTooltip = ({ active, payload }) => {
 
   return (
     
-    <div className="hr-dashboard-main">
+    <div className="hr-dashboard-content">
 
-<div className={isOpen ? "hr-dashboard-sidebar" : "hr-dashboard-sidebar-mini"}>
-
-    
-
-      <div className="hr-dashboard-menu-list">
-
-        {menuItems.map((item, index) => (
-         <div
-  key={index}
-  className={`hr-dashboard-menu-item ${index === 0 ? "active" : ""}`}
->
-  <img src={item.icon} alt={item.text} />
-
-  {isOpen && <span>{item.text}</span>}
-</div>
-        ))}
-
-      </div>
-
-
-    </div>
-
-    <div className={isOpen ? "hr-dashboard-right" : "hr-dashboard-right mini"}>
-       <div className="hr-dashboard-topbar">
-
-      <div className="hr-dashboard-top-left">
-        <img src={menu} alt="Menu" onClick={toggleSidebar}  style={{cursor:"pointer"}}/>
-
-        <div>
-          <h3 style={{color:"#003073"}}>Welcome back, HR</h3>
-          <p>Welcome back, HR!</p>
-        </div>
-      </div>
-
-      <div className="hr-dashboard-top-search">
-        <img src={search} alt="Search" />
-        <input type="text" placeholder="Search anything..." />
-      </div>
-
-      <div className="hr-dashboard-top-right">
-
-        <img
-          src={notification}
-          alt="Notification"
-          className="hr-dashboard-nav-icon"
-        />
-
-        <div className="hr-dashboard-nav-profile">
-          <img src={profile} alt="Profile" />
-
-          <div className="hr-dashboard-nav-profile-info">
-            <h4>HR</h4>
-            <p>HR Dashboard</p>
-          </div>
-
-          <img
-            src={downarrow}
-            alt="Down Arrow"
-            className="hr-dashboard-down"
-          />
-        </div>
-
-      </div>
-
-    </div>
-
-       
         <div className="hr-dashboard-welcome">
 
           <h1>Welcome back, Sudhakar!</h1>
@@ -462,16 +353,9 @@ const CustomTooltip = ({ active, payload }) => {
 
     </div>
   ))}
-
-
-
-
       </div>
 
     </div>
-
-
-
 
         <div className="hr-dashboard-intern-status-wrapper">
 
@@ -576,10 +460,6 @@ const CustomTooltip = ({ active, payload }) => {
 
     </div>
 
-
-
-
-</div>
          </div>
 
     
