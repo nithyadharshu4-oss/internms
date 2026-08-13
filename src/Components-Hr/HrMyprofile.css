@@ -1,0 +1,38 @@
+.hr-myprofile-main{
+    padding:10px;
+}
+
+
+.hr-myprofile-title{
+      display: flex;
+      justify-content:space-between;
+      align-items:center;
+}
+
+.hr-myprofile-title h1{
+    font-size:24px;
+}
+
+.hr-myprofile-title p{
+    font-size:14px;
+    color: #666666;
+    margin-top: 5px;
+}
+
+.hr-myprofile-editbtn button{
+    color:white;
+    background-color: #00328D;
+    padding: 10px 20px;
+    border: none;
+    border-radius:8px;
+    font-size:14px;
+
+}
+
+.hr-myprofile-editbtn img{
+    width:14px;
+    margin-right:8px;
+    
+    
+
+}
