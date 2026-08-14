@@ -4,7 +4,7 @@ import { HrDashboardSidebar } from "./HrDashboardSidebar";
 import { HrDashboardHeader } from "./HrDashboardHeader";
 import { HrDashboard } from "./HrDashboard";
 import { useState } from "react";
-import { HrMyprofile } from "./HrMyprofile";
+import { HrMyProfile } from "./HrMyProfile";
 
 
 
@@ -28,7 +28,7 @@ export const HrDashboardMain = () => {
         <div className="hr-dashboard-content-main">
           {activeMenu === "Dashboard" && <HrDashboard />}
 
-          {activeMenu === "My Profile" && <HrMyprofile />}
+          {activeMenu === "My Profile" && <HrMyProfile />}
         </div>
       </div>
     </div>
