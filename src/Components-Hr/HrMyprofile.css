@@ -122,86 +122,42 @@
 }
 
 .hr-myprofile-rowdata{
-    display:grid;
-    grid-template-columns: 115px 1fr;
-    align-items:start;
-    margin-bottom: 15px;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    margin-top: 15px;
 }
 
 .hr-myprofile-rowdata-label{
-    line-height: 17px;
-    font-weight: 600;
-    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    font-size: 17px;
+    width: 120px;
 }
 
 .hr-myprofile-rowdata-value{
-    line-height: 17px;
+   line-height: 17px;
+   font-size: 15px;
+   font-weight: 400;
+   color: rgb(42, 42, 42);
+    margin-left:15px;
+    text-align: center;
+}
+
+.hr-myprofile-rowdata-eudcationvalue{
+   line-height: 17px;
+    margin-left: auto;
+    width: 60px;
+    text-align: center;
 }
 
 .hr-myprofile-workinformation{
     padding:20px;
     border:0.5px solid rgba(124, 123, 123, 0.422);
     border-radius: 4px;
-    box-shadow:10px 10px 10px 10px rgba(108, 108, 108, 0.144) ;
-
 }
 
-
-.hr-myprofile-personalinformation{
-    padding:20px;
-    border:0.5px solid rgba(124, 123, 123, 0.422);
-    border-radius: 4px;
-    box-shadow:10px 10px 10px 10px rgba(108, 108, 108, 0.144) ;
+.hr-myprofile-rowdata p{
+    font-size: 15px;
+    color: gray;  
 }
-
-.hr-myprofile-personalinformation-title img{
-    width: 20px;
-    height: auto;
-}
-
-.hr-myprofile-personalinformation-title{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin-bottom:15px;
-}
-
-
-
-.hr-myprofile-education{
-    padding:20px;
-    border:0.5px solid rgba(124, 123, 123, 0.422);
-    border-radius: 4px;
-    box-shadow:10px 10px 10px 10px rgba(117, 116, 116, 0) ;
-}
-
-.hr-myprofile-education-title img{
-    width: 20px;
-    height: auto;
-}
-
-.hr-myprofile-education-title{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin-bottom:15px;
-}
-
-.hr-myprofile-education-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 22px;
-}
-
-.hr-myprofile-education-details {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.hr-myprofile-education-institute {
-    font-size: 13px;
-    color: #666666;
-}
-

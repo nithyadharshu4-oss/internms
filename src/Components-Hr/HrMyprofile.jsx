@@ -131,14 +131,14 @@ performance management.</p>
 </div>
 
 
-<div className="hr-myprofile-personalinformation">
-    <div className="hr-myprofile-personalinformation-title">
-      <img src={personalinformation} alt="personalinformation"/>
-      <h3>Personal Information</h3>
+<div className="hr-myprofile-workinformation">
+    <div className="hr-myprofile-workinformation-title">
+      <img src={personalinformation} alt="personalformation"/>
+      <h3>Personal Infromation</h3>
     </div>
 
 <div className="hr-myprofile-rowdata">
-  <span className="hr-myprofile-rowdata-label">Date of Birth </span>
+  <span className="hr-myprofile-rowdata-label">Date of Birth</span>
   <span className="hr-myprofile-rowdata-value">12 March 1993</span>
 </div>
 
@@ -153,79 +153,58 @@ performance management.</p>
 </div>
 
 <div className="hr-myprofile-rowdata">
-  <span className="hr-myprofile-rowdata-label">Marital <br/>Status </span>
+  <span className="hr-myprofile-rowdata-label">Martial Status </span>
   <span className="hr-myprofile-rowdata-value">Single</span>
 </div>
 
 <div className="hr-myprofile-rowdata">
-  <span className="hr-myprofile-rowdata-label">Language </span>
+  <span className="hr-myprofile-rowdata-label">Language</span>
   <span className="hr-myprofile-rowdata-value">English,Telugu,Hindi</span>
 </div>
- 
- <div className="hr-myprofile-rowdata">
+
+<div className="hr-myprofile-rowdata">
   <span className="hr-myprofile-rowdata-label">Blood Group</span>
   <span className="hr-myprofile-rowdata-value">o+</span>
 </div>
 </div>
-<div className="hr-myprofile-education">
-  <div className="hr-myprofile-education-title">
-    <img src={education} alt="education" />
-    <h3>Education</h3>
-  </div>
 
-  <div className="hr-myprofile-education-row">
-    <div className="hr-myprofile-education-details">
-      <span className="hr-myprofile-rowdata-label">
-        MBA - Human Resources
-      </span>
-      <span className="hr-myprofile-education-institute">
-        Osmania University, Hyderabad
-      </span>
+
+<div className="hr-myprofile-workinformation">
+    <div className="hr-myprofile-workinformation-title">
+      <img src={education} alt="education"/>
+      <h3>Education</h3>
     </div>
 
-    <span className="hr-myprofile-rowdata-value">2025</span>
+<div className="hr-myprofile-rowdata">
+  <div>
+  <span className="hr-myprofile-rowdata-label">MBA - Human Resources  </span>
+  <p>Osmania University,Hyderbad</p>
   </div>
-
-  <div className="hr-myprofile-education-row">
-    <div className="hr-myprofile-education-details">
-      <span className="hr-myprofile-rowdata-label">
-        BBA - Management
-      </span>
-      <span className="hr-myprofile-education-institute">
-        Osmania University, Hyderabad
-      </span>
-    </div>
-
-    <span className="hr-myprofile-rowdata-value">2022</span>
-  </div>
-
-  <div className="hr-myprofile-education-row">
-    <div className="hr-myprofile-education-details">
-      <span className="hr-myprofile-rowdata-label">
-        Intermediate - MPC
-      </span>
-      <span className="hr-myprofile-education-institute">
-        Sri Chaitanya Junior College
-      </span>
-    </div>
-
-    <span className="hr-myprofile-rowdata-value">2019</span>
-  </div>
-
-  <div className="hr-myprofile-education-row">
-    <div className="hr-myprofile-education-details">
-      <span className="hr-myprofile-rowdata-label">
-        Primary School
-      </span>
-      <span className="hr-myprofile-education-institute">
-        Keshava Reddy School
-      </span>
-    </div>
-
-    <span className="hr-myprofile-rowdata-value">2017</span>
-  </div>
+  <span className="hr-myprofile-rowdata-eudcationvalue">2025</span>
 </div>
 
+<div className="hr-myprofile-rowdata">
+  <div>
+  <span className="hr-myprofile-rowdata-label">BBA - Managemant</span>
+  <p>Osmania University,Hyderbad</p></div>
+  <span className="hr-myprofile-rowdata-eudcationvalue">2022</span>
+</div>
+
+<div className="hr-myprofile-rowdata">
+  <div>
+  <span className="hr-myprofile-rowdata-label">Intermediate - MPC</span>
+  <p>Sri  Chaitanya  Junior  College</p></div>
+  <span className="hr-myprofile-rowdata-eudcationvalue">2019</span>
+</div>
+
+<div className="hr-myprofile-rowdata">
+  <div>
+  <span className="hr-myprofile-rowdata-label">Primary School </span>
+  <p>Keshava Reddy School</p>
+  </div>
+  <span className="hr-myprofile-rowdata-eudcationvalue">2017</span>
+</div>
+</div>
 
 
 </div>
